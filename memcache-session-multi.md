@@ -1,3 +1,7 @@
+>APACHE
+```
+  Apache Using
+```
 > update the repository and install Apache.
 ```
 apt-get update
@@ -59,4 +63,31 @@ service apache2 reload
     echo "Client IP: ".$_SERVER['REMOTE_ADDR'] . "\n";
     print_r($_COOKIE);
 ?>
+```
+> NGINX
+```
+   Install Nginx with PHP-FPM and Memcached Support
+```
+[x] Step 1: Install Nginx
+
+```
+sudo apt update
+sudo apt install nginx
+sudo systemctl stop nginx.service
+sudo systemctl start nginx.service
+sudo systemctl enable nginx.service
+```
+[x] Step 2: Install Memcached
+
+```
+sudo apt install memcached
+sudo systemctl stop memcached.service
+sudo systemctl start memcached.service
+sudo systemctl enable memcached.service
+```
+[x] Step 3: Install PHP-FPM with Related Nginx Memcached Modules
+
+```
+sudo apt-get install php-fpm php-memcached php-cli
+
 ```
